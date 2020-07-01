@@ -1,0 +1,74 @@
+%!TEX root = ../../_book/bookdown_krishna_template.tex
+% vim:nospell ft=tex
+
+% these custom commands  are general purpose definitions that are  suitable in a
+% typical scientific  document. Some  of them  are pure  latex while  others use
+% external packages
+
+%---------- for text and other typographical elements ----------%
+\newcommand{\eg}{\textit{e}.\textit{g}.}
+\newcommand{\etal}{\textit{et~al}.}
+\newcommand{\ie}{\textit{i}.\textit{e}.,}
+\newcommand{\viz}{\textit{viz}. }
+
+\setlength\parskip{0.75\baselineskip plus0.1\baselineskip  minus0.1\baselineskip}
+
+\newcommand\blankpage{
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+% \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+% \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\let\mathbbalt\mathbb  % unicode-math changes mathbb to mathbbalt by default % https://tex.stackexchange.com/questions/360607/unicode-math-but-ordinary-blackboard-bold/360637#360637
+
+% https://tex.stackexchange.com/questions/23487/how-can-i-get-roman-numerals-in-text
+% \makeatletter
+% \newcommand*{\romanletter}[1]{\expandafter\@slowromancap\romannumeral #1@}
+% \makeatother
+
+
+%---------- inline/display math macros ----------%
+% \newcommand*\mean[1]{\overline{#1}}
+
+
+% ---------- 'increasing spacing between matrix rows' -------------------- %
+% https://tex.stackexchange.com/questions/14071/how-can-i-increase-the-line-spacing-in-a-matrix
+
+% a redefinition of an internal amsmath LaTeX macro for customizing line spacing
+% in  specific matrices  arbitrarily  as  desired: After  putting  this in  your
+% preamble, you can write \begin{pmatrix}[1.5] vary  the value as you like, with
+% pmatrix, vmatrix, bmatrix  and alike, or use it without  the optional argument
+% as usually.
+
+% \makeatletter
+% \renewcommand*\env@matrix[1][\arraystretch]{%
+%     \edef\arraystretch{#1}%
+%     \hskip -\arraycolsep
+%     \let\@ifnextchar\new@ifnextchar
+% \array{*\c@MaxMatrixCols c}}
+% \makeatother
+
+
+% improved handling of sectioning commands with titlesec package
+% \setcounter{secnumdepth}{3} % organisational level that receives a numbers
+% \setcounter{tocdepth}{3}    % print table of contents for level 3
+
+% \setlength{\columnsep}{20pt} % space between columns in two column mode; default 10pt quite narrow
+
+% \renewcommand{\footnoterule}{%
+%     \kern -3pt
+%     \hrule width 0.25\textwidth height 0.5pt
+%     \kern 2pt
+% }
+
+% % https://tex.stackexchange.com/questions/29916/how-to-place-a-footnote-inside-a-float-environment
+% \newcommand{\mpfootnotes}[1][1]{
+%     \renewcommand{\thempfootnote}{\thefootnote}
+%     \addtocounter{footnote}{-#1}
+% \renewcommand{\footnote}{\stepcounter{footnote}\footnotetext[\value{footnote}]}}
+

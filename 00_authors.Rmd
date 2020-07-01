@@ -1,0 +1,15 @@
+# About the Authors {#author .unnumbered}
+
+## Dr Krishnakumar Gopalakrishnan {-}
+
+Krishnakumar Gopalakrishnan is a High Performance Computing (HPC)/parallel programming expert with a PhD in systems engineering from Imperial College London, UK.  He is proficient in numerical software development for computational modelling, simulation and control of lithium-ion batteries and dynamic Systems. His skills include Unix/Linux development, scientific computing, multi-core and GPU programming, control systems design, power management optimization, industrial control & simulation.
+
+As of `r format(Sys.time(), '%B %Y')`, he has six years of full-time industry experience in algorithm development, system design and application engineering with various multinational technology corporations. He also possesses two years of post-doctoral research experience in academia.
+
+In the past, he has developed and delivered courses for Imperial College London in the [EdX MOOC platform](https://www.edx.org/bio/krishnakumar-gopalakrishnan) and has served as an instructor in the [Computational Methods Hub](https://www.imperial.ac.uk/computational-methods/cm-hub/) at Imperial College London, developing and teaching courses on scientific computing. He is also a certified instructor for the [Software Carpentry](https://software-carpentry.org/), a global non-profit volunteer organisation that aims to empower academic researchers with essential software principles.
+
+When not coding up the next big thing that can positively influence our society, he loves to travel and explore this beautiful planet we inhabit.
+
+## Jane Dane {-}
+
+Co-author Jane Dane is awesome.

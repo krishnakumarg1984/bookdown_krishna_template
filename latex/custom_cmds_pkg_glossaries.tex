@@ -1,0 +1,88 @@
+%!TEX root = ../../_book/bookdown_krishna_template.tex
+% vim:nospell ft=tex
+
+% \renewcommand*{\glstextformat}[1]{\textsf{#1}}
+\renewcommand*{\glstextformat}[1]{\textcolor{black}{#1}} % link coloring to match normal text, ie black
+% \preto\chapter{\glsresetall} % expand acronyms every chapter https://tex.stackexchange.com/questions/435617/glossaries-expand-acronyms-for-first-time-use-within-each-chapter/435680#435680
+
+% \glsdisablehyper
+% \newglossary[slg]{symbolslist}{syi}{syg}{Symbols}
+
+% \newglossarystyle{custom_acronyms}
+% {
+%     \setglossarystyle{long3colheader}%
+%     \renewcommand*{\glossaryheader}{}%
+%     \renewcommand{\glossentry}[2]{%
+%         \textbf{\glsentryitem{##1}\glstarget{##1}{\glossentryname{##1}}}
+%         & \glossentrydesc{##1}
+%         & {\hspace*{\fill} ##2}
+%     \tabularnewline}%
+% }
+
+% \renewcommand{\glossarypreamble}{\footnotesize}
+% \renewcommand{\glossarypreamble}{\small}
+% \setglossarypreamble[acronym]{\small}
+\setglossarypreamble[symbols]{\normalsize}
+% \renewcommand\glstreepredesc{\qquad}
+
+% https://tex.stackexchange.com/questions/118182/selectively-turn-off-hyperref-links-for-citations
+\newcommand*{\nolink}[1]{%
+	{\protect\NoHyper#1\protect\endNoHyper}%
+}
+
+\glssetcategoryattribute{acronym}{nohyperfirst}{true} % no hyperlink on first use for entries with category=acronym % https://tex.stackexchange.com/questions/434160/line-break-long-glossaries-entry-when-using-hyperref-and-latex-dvips-ps2pdf
+\setabbreviationstyle[acronym]{long-short} % applicable only for glossaries-extra.sty
+
+\GlsXtrLoadResources[
+	src={frontmatter/acronyms},%
+	charset={utf8},
+	selection={all},
+	type=acronym,% put these entries in the 'acronym' glossary
+	set-widest,% needed for 'alttree' styles
+	save-locations=false% don't save locations
+]
+
+% assign titles to group labels:
+% \glsxtrsetgrouptitle{latin}{List of Latin Symbols}
+% \glsxtrsetgrouptitle{greek}{List of Greek Symbols}
+% \glsxtrsetgrouptitle{generic}{Other Generic Nomenclature}
+
+% \GlsXtrLoadResources[
+% src={frontmatter/latin-symbols},
+% charset={utf8},
+% sort={letter-lowerupper},
+% type=symbols,
+% selection={all},
+% category={same as entry},% set the category to the entry type
+% group={latin},% assign group label
+% set-widest,% needed for 'alttree' styles
+% save-locations=false
+% ]
+
+% \GlsXtrLoadResources[
+% src={frontmatter/greek-symbols},% entries in 'greek-symbols.bib'
+% charset={utf8},
+% sort={letter-lowerupper},
+% type=symbols,% put these entries in the 'symbols' glossary
+% selection={all},
+% category={same as entry},% set the category to the entry type
+% group={greek},% assign group label
+% set-widest,% needed for 'alttree' styles
+% save-locations=false% don't save locations
+% ]
+
+% \GlsXtrLoadResources[
+% src={frontmatter/generic-symbols},
+% charset={utf8},
+% sort={none},
+% type=symbols,
+% selection={all},
+% category={same as entry},% set the category to the entry type
+% group={generic},% assign group label
+% set-widest,% needed for 'alttree' styles
+% save-locations=false
+% ]
+
+% \renewcommand{\glsnamefont}[1]{\textbf{#1}} % to bold-face acronym header with style=super
+% \glssetcategoryattribute{symbol}{glossdescfont}{normalsize} % https://tex.stackexchange.com/questions/303888/different-formatting-for-acronyms-and-glossary-entries
+

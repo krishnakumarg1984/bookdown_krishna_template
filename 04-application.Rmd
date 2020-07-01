@@ -1,0 +1,66 @@
+# Applications
+
+Some _significant_ applications are demonstrated in this chapter.
+
+## Example one
+
+```{r attr.source="style='display:inline-block;'", collapse=TRUE}
+1:10  # a sequence from 1 to 10
+10:1  # in the reverse order
+```
+
+<!--- :::: {style="display: flex;"} --->
+:::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
+
+::: {}
+Here is the **first** Div.
+
+:::
+
+::: {}
+And this block will be put on the right:
+
+:::
+
+::::
+
+## Example two
+
+```{r, attr.source='.numberLines'}
+if (TRUE) {
+  x <- 1:10
+  x + 1
+}
+```
+
+```{r, attr.source='.numberLines startFrom="6"'}
+if (TRUE) {
+  1:10
+}
+```
+
+## Example three
+
+When you subset a data frame, it does not necessarily return
+a data frame. For example, if you subset two columns, you get
+a data frame, but when you try to subset one column, you get
+a vector:
+
+```{r class.source="bg-danger", class.output="bg-warning", echo=TRUE}
+mtcars[1:5, "mpg"]
+```
+
+To make sure that we always get a data frame, we have to use
+the argument `drop = FALSE`. Now we use the chunk option
+`class.source = "bg-success"`.
+
+```{r df-drop-ok, class.source="bg-success", echo=TRUE}
+mtcars[1:5, "mpg", drop = FALSE]
+```
+
+```{r class.source="watch-out", echo=TRUE}
+mtcars[1:5, "mpg"]
+```
+
+If you want to decorate individual elements in code blocks instead of the whole blocks, you may consider using the flair package: https://github.com/kbodwin/flair.
+With this package, you can highlight different parts of your code (such as fixed strings, function names, and arguments) with custom styles (e.g., color, font size, and/or font weight).

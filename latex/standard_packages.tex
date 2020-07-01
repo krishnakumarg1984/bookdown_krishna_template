@@ -1,0 +1,83 @@
+%!TEX root = ../../_book/bookdown_krishna_template.tex
+% vim:nospell
+
+% Most notably, microtype is missing  here since it needs to be loaded after babel (which is to be loaded after fontspec)
+
+\usepackage{addlines}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{babel}       % with british, we get OUP hyphenation material for free
+\usepackage{biblatex}    % seems to have strong dependence on csquotes?
+\usepackage{booktabs}
+
+\usepackage{caption}     % for improved layout of figure captions with extra margin, smaller font than text etc.
+\usepackage{checkend}
+
+% \usepackage{fixme}
+\usepackage{flafter}
+\usepackage{fullpage}    % In Wouter's initial RAMP tex preamble
+% \usepackage{framed}
+
+\usepackage{geometry}
+\usepackage{graphicx}    % important to load before fontspec
+
+\usepackage{labelschanged}
+\usepackage{lualatex-math}
+
+\usepackage{makecell}
+\usepackage{mathtools}
+\usepackage{mathfixs}
+\usepackage{multicol}
+\usepackage{multirow}
+
+\usepackage{placeins}    % Defines a \FloatBarrier command
+
+% \usepackage{lscape}
+% \usepackage{longtable}
+
+\usepackage{rotating}
+
+\usepackage{setspace}    % Define line spacing
+
+\usepackage{siunitx}
+\usepackage{subcaption}
+% \usepackage{subfigure} % Need to be replaced with subcaption
+
+% \usepackage{titling}
+% \usepackage{varwidth}
+
+% \usepackage{xfrac}
+
+
+% ---------- unused packages (but potentially useful for any general article/document) ----------
+% \usepackage[backend=biber, style=ieee, sortlocale=en_GB, maxbibnames=50, url=true, doi=true, eprint=true ]{biblatex}
+% \usepackage{blindtext}
+% \usepackage{chkfloat}
+% \usepackage{cite} % incompatible with biblatex
+% \usepackage{cmdtrack}
+% \usepackage{colortbl} % colortbl cannot be used if xcolor is used
+% \usepackage{etoolbox} % not really required if using glossaries package, since this package then gets loaded automatically
+% \usepackage{fnpct}
+% \usepackage{footnote}
+% \usepackage{layouts} % helpful for computing textwidth, textheight etc
+% \usepackage{lettrine}
+% \usepackage{luabibentry}
+% \usepackage{makebox}
+% \usepackage[activate={true,nocompatibility},final,tracking=true,factor=1100,stretch=10,shrink=10]{microtype}
+% \usepackage{nccmath}
+% \usepackage{needspace}
+% \usepackage{nolbreaks}
+% \usepackage[all,warning]{onlyamsmath} % if using Tikz, please include the calc and babel libraries (known incompatibilities)
+% \usepackage{blindtext}
+% \usepackage{soulutf8}
+% \usepackage{subfiles}
+% \usepackage{tablefootnote}
+% \usepackage{tabularx}
+% \usepackage[table]{xcolor} % loaded by pdfx package (if used) cannot explicitly load colortbl package either before or after
+% \usepackage{url}
+% \usepackage{rotating} % defines a sidewaystable environment
+% \usepackage{pdflscape}
+

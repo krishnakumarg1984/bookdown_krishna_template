@@ -1,0 +1,40 @@
+# Literature
+
+> Roses are [red and **bold**]{color="red"} and
+> violets are [blue and *italic*]{color="blue"}.
+
+Here is a review of existing methods.
+
+| When dollars appear it's a sign
+|   that your code does not quite align
+| Ensure that your math
+|   in xaringan hath
+|   been placed on a single long line
+
+
+Here is poem.
+
+>
+| Like Barley Bending
+|
+| Like barley bending
+| 　In low fields by the sea,
+| Singing in hard wind
+| 　Ceaselessly;
+|
+| Like barley bending
+| 　And rising again,
+| So would I, unbroken,
+| 　Rise from pain;
+|
+| So would I softly,
+| 　Day long, night long,
+| Change my sorrow
+| 　Into song.
+
+
+| Hiring Manager
+| School of Ninja,
+  Hacker's University
+| 404 Not Found Road,
+  Undefined 0x1234, NA

@@ -1,0 +1,19 @@
+# Methods
+
+We describe our methods in this chapter.
+
+This work was started on `r params$start_date` and was completed on `r params$end_date`.
+
+```{r, fig.cap="An example of one figure environment containing multiple sub-figures.", fig.subcap=c("A boring scatterplot showing numbers from 1 to 10", "Another scatterplot for the cars data, with solid points", "A boxplot of the iris data"), fig.ncol = 2, out.width = "50%", fig.align = "center"}
+plot(1:10)
+plot(cars, pch = 19)
+boxplot(Sepal.Width ~ Species, data = iris)
+```
+
+<!--- Will not appear in the HTML version at all! --->
+```{=latex}
+\begin{tabular}{ll}
+A & B \\
+A & B \\
+\end{tabular}
+```

@@ -1,0 +1,98 @@
+/* https://raw.githubusercontent.com/yihui/rmarkdown-cookbook/master/css/style.css */
+.infobox {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  background: lightgray 5px center/3em no-repeat;
+  border: 2px solid orange;
+  border-radius: 10px;
+}
+.caution {
+  background-image: url("../images/caution.png");
+}
+.important {
+  background-image: url("../images/important.png");
+}
+.note {
+  background-image: url("../images/note.png");
+}
+.tip {
+  background-image: url("../images/tip.png");
+}
+.warning {
+  background-image: url("../images/warning.png");
+}
+.figure {
+  text-align: center;
+}
+p.caption {
+  color: #777;
+  margin-top: 10px;
+  text-align: left;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+  /* https://bookdown.org/yihui/rmarkdown-cookbook/text-width.html */
+  /* white-space: pre-wrap; */
+}
+.flushright {
+  text-align: right;
+}
+/* https://stackoverflow.com/questions/55616917/how-to-justify-whole-text-in-rmd-with-bookdowngitbook-as-output */
+body {
+  text-align: justify;
+}
+/* https://bookdown.org/yihui/rmarkdown-cookbook/number-lines.html */
+pre.numberSource code > span > a:first-child::before {
+  left: -0.5em;
+}
+.header-section-number {
+  padding-right: .2em;
+  font-weight: 500;
+}
+.level1 .header-section-number {
+  display: inline-block;
+  border-bottom: 3px solid;
+}
+.level1 h1 {
+  border-bottom: 1px solid;
+}
+/*
+ * p {
+ *   font-size: 17px;
+ * }
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+h1.title {
+  font-weight: 700;
+}
+.book .book-body .page-wrapper .page-inner section.normal strong {
+  font-weight: 500;
+}
+.book .book-body .page-wrapper .page-inner section.normal pre a {
+  color: inherit;
+}
+.reveal pre code {
+  overflow: visible;
+}
+/*
+ * h1, h2, h3 {
+ *   text-align: center;
+ * }
+ */
+.watch-out {
+  background-color: lightpink;
+  border: 3px solid red;
+  font-weight: bold;
+}
+.footer {
+  text-align: right;
+}

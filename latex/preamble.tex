@@ -1,0 +1,109 @@
+%!TEX root = ../../_book/bookdown_krishna_template.tex
+% vim:nospell
+
+\directlua{pdf.setminorversion(7)}
+% \RequirePackage[debrief]{silence}
+\RequirePackage[l2tabu, orthodox]{nag}
+
+\begingroup\newif\ifmy
+\IfFileExists{./\jobname.xmpdata}{}{\mytrue} % https://tex.stackexchange.com/questions/98203/can-i-test-if-a-file-exists
+\ifmy\begin{filecontents}{\jobname.xmpdata}
+	\input{latex/metadata}
+\end{filecontents}
+\fi\endgroup
+
+\PassOptionsToPackage{table}{xcolor}
+\PassOptionsToPackage{pdfencoding=auto,psdextra}{hyperref}
+
+% Options to these packages are passed to them whenever they get loaded
+% \PassOptionsToPackage{title, titletoc}{appendix}
+% \PassOptionsToPackage{makeroom,thicklines}{cancel}
+\PassOptionsToPackage{backend=biber, style=trad-plain, sorting=none, citestyle=numeric-comp, maxbibnames=50, url=true, doi=true, eprint=false}{biblatex}
+\PassOptionsToPackage{margin=10pt, font=small, labelfont={bf}, labelsep=quad}{caption}
+% \PassOptionsToPackage{singlelinecheck=off}{caption}
+% \PassOptionsToPackage{inline}{enumitem}
+\PassOptionsToPackage{draft}{fixme}
+% \PassOptionsToPackage{bottom}{footmisc}
+\PassOptionsToPackage{luatex, paper=a4paper, hmarginratio=1:1, vmarginratio=1:1, scale=0.75}{geometry}
+\PassOptionsToPackage{frac, vfrac, multskip}{mathfixs}
+% \PassOptionsToPackage{section}{placeins}
+\PassOptionsToPackage{separate-uncertainty = true, multi-part-units=single, detect-all}{siunitx}
+\PassOptionsToPackage{no-math, quiet}{fontspec}
+\PassOptionsToPackage{warnings-off={mathtools-colon}}{unicode-math}
+\PassOptionsToPackage{british}{babel}
+\PassOptionsToPackage{final, activate={true, nocompatibility}, factor=1100, stretch=10, shrink=10, babel=true}{microtype}
+\PassOptionsToPackage{british}{selnolig}
+\PassOptionsToPackage{all}{hypcap}
+\PassOptionsToPackage{nomain, acronym, symbols, record, stylemods={tree}, numberedsection=nameref}{glossaries-extra}
+\PassOptionsToPackage{depth=4, open=true, openlevel=0, numbered=true}{bookmark}
+% \PassOptionsToPackage{nameinlink}{cleveref}
+\PassOptionsToPackage{hyphenation, lastparline, nosingleletter}{impnattypo}
+\PassOptionsToPackage{defaultlines=2, all}{nowidow}
+
+% \documentclass[12pt,a4paper]{article}
+
+\ifxetex
+	\usepackage{letltxmacro}
+	\setlength{\XeTeXLinkMargin}{1pt}
+	\LetLtxMacro\SavedIncludeGraphics\includegraphics
+	\def\includegraphics#1#{% #1 catches optional stuff (star/opt. arg.)
+	\IncludeGraphicsAux{#1}%
+	}%
+	\newcommand*{\IncludeGraphicsAux}[2]{%
+		\XeTeXLinkBox{%
+			\SavedIncludeGraphics#1{#2}%
+		}%
+	}%
+\fi
+
+%%%%%%%%%% list of packages to be loaded %%%%%%%%%%
+
+\input{latex/standard_packages} % minor customised package collection for a report written in luatex; loads biblatex;
+
+\usepackage{unicode-math} % fontspec after graphicx and babel; https://tex.stackexchange.com/questions/188222/problem-with-babel-and-fontspec; no-math option (math-handling is left to unicode-math); silent to suppress all warnings (even in log file)
+\input{latex/custom_cmds_unicode_fontselection} % selection of unicode text and math fonts
+
+\usepackage{ragged2e}   % should be loaded after the body font and size have been established
+\usepackage{microtype}  % if using option babel=true, babel must be loaded before microtype; microtype must be loaded after font selection (after fontspec)
+
+\usepackage{selnolig}   % luatex package;  should go after loading babel
+
+\usepackage{float}      % Loading order is important here https://tex.stackexchange.com/questions/435529/correct-loading-order-of-package-newfloat-along-with-hyperref-and-algorithmic-pa/435597#435597
+\usepackage{csquotes}   % The fvextra package is loaded by minted, so you should load minted before csquotes; has a strong dependency with biblatex
+
+\input{latex/hyperref_related_packages}  % hyperxmp, hyperref, nameref, algorithm, hypcap, bookmark, glossaries, cleveref, showframe
+
+\usepackage{impnattypo}
+\usepackage{nowidow}
+
+\usepackage{xurl} % to be loaded after biblatex if the new feature (Dec 2018) of biblatex interaction is needed
+
+\usepackage{makeidx}
+\makeindex
+
+%---------- end of package loading ---------%
+
+
+
+%---------- begin custom commands ----------%
+
+% \input{latex/colors_for_doc}
+\input{latex/custom_cmds_bibliography}     % 'bib' file goes in here
+% \input{latex/custom_cmds_graphics}
+
+\input{latex/custom_cmds_pkg_amsthm}
+\input{latex/custom_cmds_pkg_caption}
+\input{latex/custom_cmds_pkg_cleveref}
+\input{latex/custom_cmds_pkg_csquotes}
+\input{latex/custom_cmds_pkg_fancyhdr}
+\input{latex/custom_cmds_pkg_glossaries}
+% \input{latex/custom_cmds_pkg_silence}
+\input{latex/custom_cmds_pkg_siunitx}
+% \input{latex/custom_cmds_pkg_titling}
+\input{latex/custom_cmds_tabularmaterial}
+\input{latex/custom_genpurpose_cmds}
+\input{latex/custom_latex_settings}
+
+%---------- end custom commands ----------%
+
+

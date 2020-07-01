@@ -1,0 +1,11 @@
+book_filename: "bookdown_krishna_template"
+repo: https://github.com/krishnakumarg1984/bookdown_krishna_template
+delete_merged_file: true
+clean: [packages.bib]
+language:
+  label:
+    fig: "FIGURE "
+    tab: "TABLE "
+  ui:
+    chapter_name: "Chapter "
+edit: "https://github.com/krishnakumarg1984/bookdown_krishna_template/edit/master/%s"

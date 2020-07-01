@@ -1,0 +1,65 @@
+%!TEX root = ../../_book/bookdown_krishna_template.tex
+% vim: nospell
+
+\usepackage{hyperxmp} % comment out if using the pdfx package
+\usepackage{hyperref} % comment out if using the pdfx package
+
+\hypersetup{%
+	anchorcolor        = black,
+	breaklinks         = true,
+	citecolor          = [RGB]{0,68,136}, % https://personal.sron.nl/https://personal.sron.nl/pault/#fig:scheme_highcontrastpault/#fig:scheme_highcontrast
+	colorlinks         = true,
+	final              = true,
+	linkcolor          = [RGB]{0,68,136}, % https://personal.sron.nl/https://personal.sron.nl/pault/#fig:scheme_highcontrastpault/#fig:scheme_highcontrast
+	linktocpage        = true,
+	pdfauthor          = {Wouter Edeling \and Hamid Arabnejad \and Robbie Sinclair \and Diana Suleimenova \and Krishnakumar Gopalakrishnan \and Bartosz Bosak \and Derek Groen \and Imran Mahmood Qureshi Hashmi \and Daan Crommelin \and Peter Coveney},
+	pdfborderstyle     = {/S/U/W 1},
+	pdfcenterwindow    = true,
+	pdfcontactaddress  = {Centre for Computational Science, Christopher Ingold Building, University College London, 20 Gordon Street},
+	pdfcontactcity     = {London, United Kingdom},
+	pdfcontactcountry  = {United Kingdom},
+	pdfcontactemail    = {p dot v dot coveney at ucl dot ac uk},
+	pdfcontactpostcode = {WC1H 0AJ},
+	pdfcontactregion   = {Greater London},
+	pdfcontacturl      = {https://ccs.chem.ucl.ac.uk},
+	pdfcopyright       = {\textcopyright{} The authors. All rights reserved.},
+	pdfcreator         = {LuaTeX with hyperref},
+	pdfdisplaydoctitle = true,
+	pdffitwindow       = true,
+	pdfkeywords        = {CovidSim , covid-sim , Uncertainty Quantification , Verification and Validation , EZVVUQ , Coronavirus , Computational Modelling , Numerical Simulation , Mathematical models , Simulation methods , Computer simulation , Computer modeling},
+	pdflang            = {en-GB-oxendict},
+	pdfmetalang        = {en-GB-oxendict},
+	pdfproducer        = {LuaTeX},
+	pdfsource          = {},
+	pdfstartview       = {Fit},
+	pdfsubject         = {CovidSim , covid-sim , Uncertainty Quantification , Verification and Validation , EZVVUQ , Coronavirus , Computational Modelling , Numerical Simulation , Mathematical models , Simulation methods , Computer simulation , Computer modeling},
+	% pdftitle           = {Sensitivity Analysis and Uncertainty Quantification for the covid-sim Epidemiological Code --- Preliminary report},
+	pdftoolbar         = true,
+	plainpages         = false,
+	pdfencoding        = auto,
+	unicode            = true,
+	urlcolor           = [RGB]{0,68,136}, % https://personal.sron.nl/https://personal.sron.nl/pault/#fig:scheme_highcontrastpault/#fig:scheme_highcontrast
+}%
+
+\let\oldhref\href
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
+
+
+% ---------- packages to be loaded after hyperref ----------%
+
+\usepackage{hypcap} % to be loaded after hyperref. fix hyperref links to jump directly to Table or Figure
+
+\usepackage{pdftexcmds} % not required if using pdfx package
+
+\usepackage{glossaries-extra} % should be loaded after hyperref, but before cleveref % consider 'symbols' option
+
+\usepackage{hypdestopt} % seems to have problems with pdfx package?
+
+\usepackage{bookmark} % improves bookmarks handling. % More features and faster updated bookmarks.
+\usepackage{cleveref}
+
+% \usepackage{showframe}
+% \usepackage[noframe]{showframe}
+\newcommand{\blackurl}{\hypersetup{urlcolor=black}}%
+\newcommand{\regularurl}{\hypersetup{urlcolor=[RGB]{0,68,136}}}%
+

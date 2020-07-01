@@ -1,0 +1,31 @@
+`r if (knitr:::is_html_output()) '
+# References {-}
+'`
+
+<div id="refs"></div>
+
+# (APPENDIX) Appendix {-}
+
+# More information
+
+This will be placed inside Appendix A.
+
+# One more thing
+
+This will be placed inside Appendix B.
+
+# Appendix: All code for this report
+
+```{r get-labels, echo = FALSE}
+labs = knitr::all_labels()
+labs = setdiff(labs, c("setup", "get-labels"))
+```
+
+```{r all-code, ref.label=labs, eval=FALSE, echo=TRUE}
+```
+
+
+# Data files for download
+
+`r xfun::embed_files(list.files(".", "[.](Rmd|csv)$"),text = 'Download all data')`
+

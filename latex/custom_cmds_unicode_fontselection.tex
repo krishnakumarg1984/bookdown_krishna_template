@@ -1,0 +1,212 @@
+%!TEX root = ../../_book/bookdown_krishna_template.tex
+% vim:nospell
+
+% \usepackage{libertinus}
+\setmainfont{LibertinusSerif}[
+	Extension=  .otf,
+	UprightFont=  *-Regular,
+	BoldFont          = *-Bold,
+	ItalicFont=  *-Italic,
+	BoldItalicFont    = *-BoldItalic,
+	SlantedFont=  *-Regular,
+	SmallCapsFont   =  *-Regular,
+	Numbers           = {Proportional, Lining},
+	% Ligatures         = {TeX, Common, Required},
+	ItalicFeatures  =  {  SmallCapsFont  =  *-Italic  },
+	SmallCapsFeatures = {Letters = SmallCaps, RawFeature=+smcp},
+	SlantedFeatures=  {FakeSlant=0.2},
+	Kerning           = {Uppercase, On},
+	% RawFeature=  {\libertinus@figurealign;\libertinus@figurestyle},
+	% Scale=  \libertinusRM@scale  ,
+	% BoldFont=  *-\libertinus@boldstyle,
+	% BoldFeatures    =  {  SmallCapsFont  =  *-\libertinus@boldstyle  },
+	% BoldItalicFont  =  *-\libertinus@boldstyle  Italic,
+	% BoldItalicFeatures  =  {  SmallCapsFont  =  *-\libertinus@boldstyle  Italic  },
+	% BoldSlantedFont=  *-\libertinus@boldstyle,
+	% BoldSlantedFeatures=  {FakeSlant=0.2,  SmallCapsFont  =  *-\libertinus@boldstyle  },
+]
+
+\setsansfont{LibertinusSans}[
+	Extension=  .otf,
+	UprightFont=  *-Regular,
+	ItalicFont=  *-Italic,
+	ItalicFeatures  =  {  SmallCapsFont  =  *-Italic  },
+	SlantedFont=  *-Regular,
+	SlantedFeatures=  {FakeSlant=0.2},
+	BoldFont=  *-Bold,
+	BoldFeatures    =  {  SmallCapsFont  =  *-Bold  },
+	BoldItalicFont  =  *-Italic,
+	BoldItalicFeatures  =  {RawFeature={embolden=3}},
+	BoldSlantedFont=  *-Bold,
+	BoldSlantedFeatures  =  {FakeSlant=0.2,  SmallCapsFont  =  *-Bold  },
+	SmallCapsFont   =  *-Regular,
+	SmallCapsFeatures={RawFeature=+smcp},
+	% RawFeature=  {\libertinus@figurealign;\libertinus@figurestyle}  ,
+	% Scale=  \libertinusSF@scale  ,
+]
+
+
+\setmathfont{LibertinusMath-Regular.otf}%[BoldFont=LibertinusMath-Bold.otf]
+\setmathfont[version=bold,RawFeature={embolden=3}]{LibertinusMath-Regular.otf}
+\setmonofont{Latin Modern Mono}
+\defaultfontfeatures{ Scale = MatchLowercase }
+\defaultfontfeatures[\rmfamily]{ Scale = 1}
+\setmathfont[range = {\mathunder,\triangleq,\underbrace},Scale = MatchUppercase]{Latin Modern Math}
+
+
+% \newfontfamily\LibertinusSerifSB{LibertinusSerif}[
+% 	% RawFeature=  {\libertinus@figurealign;\libertinus@figurestyle},
+% 	% Scale=  \libertinusRM@scale,
+% 	UprightFont=  *-Regular,
+% 	ItalicFont=  *-Italic,
+% 	ItalicFeatures  =  {  SmallCapsFont  =  *-Italic  },
+% 	SlantedFont=  *-Regular,
+% 	SlantedFeatures=  {FakeSlant=0.2},
+% 	BoldFont=  *-Semibold,
+% 	BoldFeatures    =  {  SmallCapsFont  =  *-Semibold  },
+% 	BoldItalicFont  =  *-SemiboldItalic,
+% 	BoldItalicFeatures  =  {  SmallCapsFont  =  *-SemiboldItalic  },
+% 	BoldSlantedFont=  *-Semibold,
+% 	BoldSlantedFeatures  =  {FakeSlant=0.2,  SmallCapsFont  =  *-Semibold  },
+% 	SmallCapsFont   =  *-Regular,
+% 	SmallCapsFeatures={RawFeature=+smcp},
+% 	Extension=  .otf
+% ]
+
+
+% \newfontfamily\LibertinusSerifOsF{LibertinusSerif}[
+% 	RawFeature=  {+onum},
+% 	% Scale=  \libertinusRM@scale  ,
+% 	UprightFont=  *-Regular,
+% 	ItalicFont=  *-Italic,
+% 	ItalicFeatures  =  {  SmallCapsFont  =  *-Italic  },
+% 	SlantedFont=  *-Regular,
+% 	SlantedFeatures=  {FakeSlant=0.2},
+% 	% BoldFont=  *-\libertinus@boldstyle,
+% 	% BoldFeatures    =  {  SmallCapsFont  =  *-\libertinus@boldstyle  },
+% 	% BoldItalicFont  =  *-\libertinus@boldstyle  Italic,
+% 	% BoldItalicFeatures  =  {  SmallCapsFont  =  *-\libertinus@boldstyle  Italic  },
+% 	% BoldSlantedFont=  *-\libertinus@boldstyle,
+% 	% BoldSlantedFeatures  =  {FakeSlant=0.2,  SmallCapsFont  =  *-\libertinus@boldstyle  },
+% 	SmallCapsFont   =  *-Regular,
+% 	SmallCapsFeatures={RawFeature=+smcp},
+% 	Extension=  .otf
+% ]
+
+
+% \newfontfamily\LibertinusSerifTLF{LibertinusSerif}[
+% 	RawFeature=  {+tnum;-onum},
+% 	% Scale=  \libertinusRM@scale  ,
+% 	UprightFont=  *-Regular,
+% 	ItalicFont=  *-Italic,
+% 	ItalicFeatures  =  {  SmallCapsFont  =  *-Italic  },
+% 	SlantedFont=  *-Regular,
+% 	SlantedFeatures=  {FakeSlant=0.2},
+% 	% BoldFont=  *-\libertinus@boldstyle,
+% 	% BoldFeatures    =  {  SmallCapsFont  =  *-\libertinus@boldstyle  },
+% 	% BoldItalicFont  =  *-\libertinus@boldstyle  Italic,
+% 	% BoldItalicFeatures  =  {  SmallCapsFont  =  *-\libertinus@boldstyle  Italic  },
+% 	% BoldSlantedFont=  *-\libertinus@boldstyle,
+% 	% BoldSlantedFeatures  =  {FakeSlant=0.2,  SmallCapsFont  =  *-\libertinus@boldstyle  },
+% 	SmallCapsFont   =  *-Regular,
+% 	SmallCapsFeatures={RawFeature=+smcp},
+% 	Extension=  .otf
+% ]
+
+
+% \newfontfamily\LibertinusSansOsF{LibertinusSans}[
+% 	RawFeature    =  {+onum;+pnum},
+% 	% Scale=  \libertinusSF@scale  ,
+% 	UprightFont=  *-Regular,
+% 	ItalicFont=  *-Italic,
+% 	ItalicFeatures  =  {  SmallCapsFont  =  *-Italic  },
+% 	SlantedFont=  *-Regular,
+% 	SlantedFeatures=  {FakeSlant=0.2},
+% 	BoldFont=  *-Bold,
+% 	BoldFeatures    =  {  SmallCapsFont  =  *-Bold  },
+% 	BoldItalicFont  =  *-Italic,
+% 	BoldItalicFeatures  =  {RawFeature={embolden=3}},
+% 	BoldSlantedFont=  *-Bold,
+% 	BoldSlantedFeatures  =  {FakeSlant=0.2,  SmallCapsFont  =  *-Bold  },
+% 	SmallCapsFont   =  *-Regular,
+% 	SmallCapsFeatures={RawFeature=+smcp},
+% 	Extension=  .otf
+% ]
+
+% \newfontfamily\LibertinusSansTLF{LibertinusSans}[
+% 	RawFeature    =  {+lnum;-onum;+tnum}  ,
+% 	% Scale=  \libertinusSF@scale  ,
+% 	UprightFont=  *-Regular,
+% 	ItalicFont=  *-Italic,
+% 	ItalicFeatures  =  {  SmallCapsFont  =  *-Italic  },
+% 	SlantedFont=  *-Regular,
+% 	SlantedFeatures=  {FakeSlant=0.2},
+% 	BoldFont=  *-Bold,
+% 	BoldFeatures    =  {  SmallCapsFont  =  *-Bold  },
+% 	BoldItalicFont  =  *-Italic,
+% 	BoldItalicFeatures  =  {RawFeature={embolden=3}},
+% 	BoldSlantedFont=  *-Bold,
+% 	BoldSlantedFeatures  =  {FakeSlant=0.2,  SmallCapsFont  =  *-Bold  },
+% 	SmallCapsFont   =  *-Regular,
+% 	SmallCapsFeatures={RawFeature=+smcp},
+% 	Extension=  .otf
+% ]
+
+% \newfontfamily\LibertinusKeyboard{libertinuskeyboard-regular.otf}
+% \newfontfamily\LibertinusDisplay{libertinusserifdisplay-regular.otf}
+% \newfontfamily\Libertinusinitials{libertinusserifinitials-regular.otf
+
+% \setmainfont{LibertinusSerif}[%
+% Extension         = .otf,
+% Path              = ./fonts/,
+% UprightFont       = *-Regular,
+% BoldFont          = *-Bold,
+% ItalicFont        = *-Italic,
+% BoldItalicFont    = *-BoldItalic,
+% Numbers           = {Proportional, Lining},
+% Ligatures         = {TeX, Common, Required},
+% SmallCapsFeatures = {Letters = SmallCaps},
+% % Fractions         = On,
+% Kerning           = {Uppercase, On},
+% % FontFace       = {sb}{n}{*-Semibold},
+% % FontFace       = {sb}{it}{*-SemiboldItalic},
+% ]%
+
+% \setsansfont{LibertinusSans}[%
+% Extension         = .otf,
+% Path              = ./fonts/,
+% UprightFont       = *-Regular,
+% BoldFont          = *-Bold,
+% ItalicFont        = *-Italic,
+% Numbers           = {Proportional, Lining},
+% Ligatures         = {TeX, Common, Required},
+% SmallCapsFeatures = {Letters = SmallCaps},
+% % Fractions         = On,
+% Kerning           = {Uppercase, On},
+% ]%
+
+% \setmainfont[Numbers={Proportional},Ligatures={TeX, Common%, Historic, Contextual, Rare, Discretionary
+% }]{Libertinus Serif}
+% \setsansfont{Libertinus Sans}
+
+% % https://tex.stackexchange.com/questions/103379/minionpro-semibold-medium
+% \DeclareRobustCommand\sbseries{\fontseries{sb}\selectfont}
+% \DeclareTextFontCommand{\textsb}{\sbseries}
+
+% % \setmathfont[bold-style = ISO]{LibertinusMath-Regular.otf} % https://github.com/libertinus-fonts/libertinus/issues/20
+% \setmathfont{LibertinusMath-Regular}[%
+% Extension  = .otf,
+% Path       = ./fonts/,
+% bold-style = ISO, % https://github.com/libertinus-fonts/libertinus/issues/20
+% ]%
+
+% \setmathfont{libertinusmath-bold}[%
+% Extension  = .otf,
+% Path       = ./fonts/,
+% bold-style = ISO, % https://github.com/libertinus-fonts/libertinus/issues/20
+% version    = bold,
+% ]%
+
+% \setmathfont[math-style=upright,range={`e,`i}]{Latin Modern Math}
+% \setmathfont[range={\mathunder,\triangleq},Scale=MatchUppercase]{STIX2Math.otf}
+

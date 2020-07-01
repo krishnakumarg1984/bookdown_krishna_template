@@ -1,0 +1,62 @@
+bookdown::gitbook:
+  split_by: section
+  # code_fold: show
+  # base_format: distill::distill_article
+  pandoc_args:
+  #   - --lua-filter=lua/lower-header.lua
+    - --lua-filter=lua/color-text.lua
+  css: [css/style.css, css/columns.css]
+  highlight: tango  # tango, pygments, kate, monochrome, espresso, zenburn, haddock, breezedark, and textmate
+  includes:
+    in_header: html/header.html
+    # before_body: html/before.html
+    after_body: html/after.html
+  config:
+    toc:
+      before: |
+        <li><a href="./">A Starter Template for Generic Reports</a></li>
+      after: |
+        <li><a href="https://www.linkedin.com/in/krishnakumargopalakrishnan/" target="blank">Customised report by K. Gopalakrishnan</a></li>
+    sharing:
+      github: yes
+      facebook: no
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  fig_caption: yes
+  fig_height: 5
+  fig_width: 8
+  number_sections: yes
+  # toc: false
+  # base_format: rticles::ieee_article
+  includes:
+    in_header: [latex/preamble.tex, latex/columns.tex]
+    before_body: latex/before_body.tex
+    after_body: latex/after_body.tex
+  keep_tex: yes
+  fig_crop: false
+  latex_engine: lualatex
+  # citation_package: natbib
+  # citation_package: biblatex
+  pandoc_args:
+    # - --latex_engine: latexmk
+  #   - --lua-filter=lua/lower-header.lua
+    - --lua-filter=lua/color-text.lua
+    # - --listings
+    - --top-level-division=section
+    - --wrap=none
+  toc_depth: '3'
+  toc_unnumbered: no
+  toc_appendix: yes
+  highlight_bw: yes
+  quote_footer: ["\\VA{", "}{}"]
+  extra_dependencies: ["float"]
+  # extra_dependencies: ["bbm", "threeparttable"]
+  # extra_dependencies:
+  #   caption: ["labelfont={bf}"]
+  #   hyperref: ["unicode=true", "breaklinks=true"]
+  #   lmodern: null
+bookdown::epub_book: default
+# bookdown::word_book: default
+  # toc: yes
+  # toc_depth: '2'
+

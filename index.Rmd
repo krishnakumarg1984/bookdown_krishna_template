@@ -1,0 +1,143 @@
+---
+# title: "A Starter Template for Generic Reports"
+draft: true
+title: |
+  A Starter Template for Generic Reports
+subtitle: "Includes a quick RMarkdown reference"
+# authornames: "Krishnakumar Gopalakrishnan, Joe Bloggs, Jane Doe"
+author1name: "Krishnakumar Gopalakrishnan"
+author2name: "Joe Bloggs"
+author3name: "Jane Doe"
+# author:
+  # - name: "JJ Allaire"
+  #   url: https://github.com/jjallaire
+  #   affiliation: RStudio
+  #   affiliation_url: https://www.rstudio.com
+# author: "Krishnakumar Gopalakrishnan"
+# author: "Author 1, Author 2, ... , Author N"
+# date: "June 12, 2020" # for hard-coded date
+# date: "`r Sys.Date()`"
+date: "Last compiled on `r format(Sys.time(), '%A, %B %d, %Y')` at `r format(Sys.time(), '%H:%M %Z')`"  # for dynamic date, the date-format can be specified as the classical unix-style strftime format.
+github-repo: krishnakumarg1984/bookdown_krishna_template
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+# documentclass: ieee
+documentclass: article
+bibliography: [references.bib, packages.bib]
+# biblio-style: apalike
+csl: csl/ieee-with-url.csl
+link-citations: yes
+description: "This is Krishnakumar Gopalakrishnan's customised RMarkdown starter template for generic reports written using the bookdown R package."
+colorlinks: yes
+graphics: yes
+lot: yes
+lof: yes
+papersize: a4
+# linestretch: 1.5
+# classoption:
+#   - twocolumn # This option changes the layout of the whole document, but if you want to switch back to the one-column mode from a certain point, you may insert a command \onecolumn at that point. If you want to continue the two-column mode, insert \twocolumn
+#   - landscape
+links-as-notes: yes
+fontsize: 12pt
+# fontfamily: accanthis # only for pdflatex
+# mainfont: Palatino
+# sansfont: Palatino
+# monofont: "Source Code Pro"
+# monofontoptions: "Scale=0.8"
+# nocite: |
+#   @item1, @item
+# nocite: '@*'
+# geometry: margin=0.9in
+# header-includes:
+#   - \usepackage{titling}
+#   - \pretitle{\begin{center}
+#     \includegraphics[width=2in,height=2in]{images/UCL_logo.pdf}
+#   - \posttitle{\end{center}}
+tidy: styler
+editor_options:
+  chunk_output_type: console
+params:
+  start_date: 'Jan 01, 2020'
+  end_date: 'June 16, 2020'
+---
+
+
+```{r setup, include=FALSE}
+set.seed(0728)
+
+# https://stackoverflow.com/questions/33969024/install-packages-fails-in-knitr-document-trying-to-use-cran-without-setting-a
+packagerepos = getOption("repos")
+packagerepos["CRAN"] = "https://cloud.r-project.org/"
+options(repos = packagerepos)
+
+# if (!require("pacman"))
+#   install.packages("pacman")
+library("pacman")
+# if (!require("devtools"))
+  p_load("devtools")
+# if (!require("tinytex"))
+  p_load("tinytex")
+if (!require("formatR"))
+    install.packages("formatR", repos = "http://cran.rstudio.com")
+
+knitr::opts_chunk$set(tidy = TRUE)
+knitr::opts_chunk$set(echo = FALSE, cache=TRUE, messages=FALSE, warning=FALSE)
+
+if (knitr::is_html_output()) {
+    # ignore percentage widths for HTML output, unless they are used for multiple
+    # figures side by side
+    knitr::opts_hooks$set(out.width = function(options) {
+                              if (options$fig.show != "hold" && grepl("%$", options$out.width)) {
+                                  options$out.width <- NULL
+                              }
+                              options
+})
+}
+
+# p_load("rticles")
+
+# # screenshot HTML widgets
+# if (is.null(webshot:::find_phantom())) webshot::install_phantomjs()
+
+knitr::write_bib(c(.packages(), "xaringan", "bookdown", "knitr", "rmarkdown"), file = "packages.bib")
+
+authornamesvector <- c(rmarkdown::metadata$author1name,rmarkdown::metadata$author2name,rmarkdown::metadata$author3name)
+authornamesstring <- knitr::combine_words(authornamesvector)
+```
+
+---
+author:
+  - `r authornamesvector[[1]]`^[University College London, krishna.kumar@ucl.ac.uk]
+  - `r authornamesvector[[2]]`^[Institution Two, jbloggs@example.org]
+  - `r authornamesvector[[3]]`^[Institution Three, jane@awesomeuniversity.edu]
+---
+
+
+# Preface {-}
+
+<!---
+  ::: {.infobox .caution data-latex="{caution}"}
+  This is a draft WIP report.
+  :::
+--->
+
+R Markdown is a powerful tool for combining analysis and reporting into the same document.
+
+## Another front matter section {-}
+
+Any other front matter section that is unnumbered can be included here if needed.
+
+<!-- \newpage -->
+
+## Document conventions and notations {-}
+
+Some reports may include a brief explanation of the mathematical notations and conventions used in the document.
+
+## Acknowledgements {-}
+
+The authors, `r authornamesstring``r if (length(authornamesstring)<3) print(",")` would like to express their sincere thanks to blah blah ...
+
+::: {.flushright data-latex=""}
+| Krishnakumar Gopalakrishnan
+| London, United Kingdom
+:::

@@ -1,0 +1,1 @@
+This is Krishnakumar Gopalakrishnan's customized template for a report (or other similar multi-chapter documents excluding theses) based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown).

@@ -1,0 +1,7 @@
+Package: placeholder
+Type: Book
+Title: A Starter Template for Generic Reports.
+Version: 0.0.1
+Imports: bookdown, DiagrammeR, blogdown, webshot, fs, here, sass
+Remotes: krishnakumarg1984/bookdown_krishna_template
+
